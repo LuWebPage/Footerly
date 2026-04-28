@@ -1,0 +1,1 @@
+O Footerly é um site simples criado para facilitar a geração de rodapés (footers) desites ou aplicativos, contendo vários templates responsivos prontos gratuitos para copiar e colar em sua página web ou onde desejar.
