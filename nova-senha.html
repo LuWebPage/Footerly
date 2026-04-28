@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Nova Senha</title>
+<link rel="stylesheet" href="style.css">
+
+<link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="shortcut icon" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+
+<style>
+.msg { text-align:center; margin-top:10px; }
+.error { color:red; }
+.success { color:green; }
+</style>
+</head>
+
+
+<body>
+
+<div class="auth-container">
+    <h2>Redefinir Senha</h2>
+
+    <form id="novaSenhaForm">
+        <input type="text" id="codigo" placeholder="Código recebido" required>
+        <input type="password" id="novaSenha" placeholder="Nova senha" required>
+
+        <button type="submit" class="btn">Redefinir</button>
+
+        <div id="msg" class="msg"></div>
+    </form>
+</div>
+
+<script>
+document.getElementById("novaSenhaForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const codigo = document.getElementById("codigo").value;
+    const novaSenha = document.getElementById("novaSenha").value;
+    const msg = document.getElementById("msg");
+
+    const codigoSalvo = localStorage.getItem("codigoRecuperacao");
+
+    if(codigo !== codigoSalvo){
+        msg.textContent = "Código inválido.";
+        msg.className = "msg error";
+        return;
+    }
+
+    if(novaSenha.length < 4){
+        msg.textContent = "Senha muito curta.";
+        msg.className = "msg error";
+        return;
+    }
+
+    // atualiza senha
+    localStorage.setItem("senha", novaSenha);
+
+    msg.textContent = "Senha redefinida com sucesso!";
+    msg.className = "msg success";
+
+    setTimeout(() => {
+        window.location.href = "login.html";
+    }, 1500);
+});
+</script>
+
+</body>
+</html>

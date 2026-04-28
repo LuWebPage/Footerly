@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Quem Somos - Footerly</title>
+<link rel="stylesheet" href="style.css">
+
+<link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="shortcut icon" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+
+<style>
+/* estado inicial */
+.reveal {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.25s ease-out;
+}
+
+/* estado final */
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+
+</head>
+<body>
+
+<header class="reveal">
+    <div class="logo reveal">Footerly</div>
+
+    <nav>
+        <a href="index.html" class="btn reveal">Footerly</a>
+        <a href="login.html" class="btn reveal">Login</a>
+        <a href="sign-in.html" class="btn reveal">Sign-In</a>
+    </nav>
+</header>
+
+<section class="hero reveal">
+    <h1 class="reveal">Quem Somos</h1>
+</section>
+
+<section class="content-section reveal">
+    <p class="reveal">
+     A plataforma foi desenvolvida para ajudar empresas, profissionais e criadores de conteúdo a estruturarem seus rodapés de forma estratégica, reunindo links institucionais, canais de contato, redes sociais e informações legais essenciais, sem comprometer a experiência do usuário, especialmente em dispositivos móveis.
+    </p>
+
+    <p class="reveal">
+    O Footerly nasce com o compromisso de ajudar empresas, profissionais e criadores a fortalecerem a credibilidade de seus sites, oferecendo soluções práticas, atuais e alinhadas às exigências legais, como Política de Privacidade, Termos de Uso e LGPD. 
+    </p>
+
+    <p class="reveal">
+    Sabemos que o footer é onde o usuário busca confiança, informações institucionais, contatos e links essenciais. Por isso, desenvolvemos modelos que vão além da estética, priorizando usabilidade, responsividade e boas práticas de SEO.
+    </p>
+
+    <p class="reveal">
+        Nosso objetivo é oferecer soluções acessíveis e funcionais, garantindo credibilidade, SEO e conformidade com a LGPD. Footers exclusivos e personalizados para o seu site, Tenha a melhor experiência com o Footerly.
+    </p>
+</section>
+
+<section class="hero reveal">
+    <h1 class="reveal">OBJETIVO</h1>
+</section>
+
+<section class="content-section reveal">
+    <p class="reveal">
+      O Footerly tem como objetivo oferecer uma solução prática e acessível para a criação de footers funcionais, organizados e visualmente consistentes para sites de diferentes segmentos.
+    </p>
+
+    <p class="reveal">
+       Além do design, o Footerly busca garantir que cada footer contribua para a credibilidade do site, a retenção do usuário e a otimização para mecanismos de busca (SEO).
+    </p>
+
+    <p class="reveal">
+        Outro objetivo central da plataforma é promover a conformidade com requisitos legais atuais, como LGPD, Política de Privacidade e Termos de Uso.
+    </p>
+
+    <p class="reveal">
+        Por meio de templates gratuitos e opções de personalização, o Footerly pretende simplificar processos, economizar tempo e elevar o padrão de qualidade dos rodapés na web.
+    </p>
+</section>
+
+<footer class="footer reveal">
+    <div class="footer-container">
+
+        <div class="footer-logo reveal">
+            <h2 class="reveal">Footerly</h2>
+            <p class="reveal">
+                Transformando rodapés em experiências estratégicas e funcionais para sites de todos os segmentos.
+            </p>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.instagram.com/wluvviie/" target="_blank" class="reveal">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@luwiie9411" target="_blank" class="reveal">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://wa.me/5581984016083" target="_blank" class="reveal">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:luanvieira150504@gmail.com" class="reveal">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom reveal">
+        <p class="reveal">© 2026 Footerly - Todos os direitos reservados</p>
+    </div>
+</footer>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script>
+window.addEventListener("load", () => {
+    const elementos = document.querySelectorAll(".reveal");
+
+    elementos.forEach((el, index) => {
+        setTimeout(() => {
+            el.classList.add("show");
+        }, index * 50); // ⚡ ULTRA RÁPIDO
+    });
+});
+</script>
+
+</body>
+</html>

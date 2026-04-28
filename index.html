@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Footerly</title>
+<link rel="stylesheet" href="style.css">
+
+<link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="shortcut icon" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+
+<style>
+/* estado inicial */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+/* estado final */
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+
+</head>
+<body>
+
+<header class="reveal">
+    <div class="logo reveal">Footerly</div>
+
+    <nav>
+        <a href="login.html" class="btn reveal">Login</a>
+        <a href="sign-in.html" class="btn reveal">Sign-In</a>
+        <a href="quem-somos.html" class="reveal">Quem Somos</a>
+        <a href="servicos.html" class="reveal">Serviços</a>
+    </nav>
+</header>
+
+<section class="hero reveal" style="margin-top:50px;">
+    <h2 class="reveal">Pronto para melhorar seu site?</h2>
+    <p class="reveal">Escolha um template e comece agora mesmo.</p>
+
+    <br class="reveal">
+
+    
+    <a href="login.html" class="btn reveal">Entrar Agora</a>
+</section>
+
+<section class="hero reveal">
+    <h1 class="reveal">Footers exclusivos e personalizados para o seu site</h1>
+    <p class="reveal">Tenha a melhor experiência com o Footerly</p>
+    <a href="sign-in.html" class="btn reveal">Começar Grátis</a>
+</section>
+
+<footer class="footer reveal">
+    <div class="footer-container">
+
+        <div class="footer-logo reveal">
+            <h2 class="reveal">Footerly</h2>
+            <p class="reveal">
+                Transformando rodapés em experiências estratégicas e funcionais para sites de todos os segmentos.
+            </p>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.instagram.com/wluvviie/" target="_blank" class="reveal">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@luwiie9411" target="_blank" class="reveal">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://wa.me/5581984016083" target="_blank" class="reveal">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:luanvieira150504@gmail.com" class="reveal">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom reveal">
+        <p class="reveal">© 2026 Footerly - Todos os direitos reservados</p>
+    </div>
+</footer>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script>
+window.addEventListener("load", () => {
+    const elementos = document.querySelectorAll(".reveal");
+
+    elementos.forEach((el, index) => {
+        setTimeout(() => {
+            el.classList.add("show");
+        }, index * 10); // ⚡ MUITO RÁPIDO
+    });
+});
+</script>
+
+</body>
+</html>

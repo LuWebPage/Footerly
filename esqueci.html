@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Recuperar Senha</title>
+<link rel="stylesheet" href="style.css">
+
+<link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="shortcut icon" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+
+<style>
+.msg { text-align:center; margin-top:10px; }
+.error { color:red; }
+.success { color:green; }
+</style>
+</head>
+
+<body>
+
+<div class="auth-container">
+    <h2>Recuperar Senha</h2>
+
+    <form id="resetForm">
+        <input type="email" id="email" placeholder="Digite seu email" required>
+        <button type="submit" class="btn">Enviar Código</button>
+
+        <div id="msg" class="msg"></div>
+    </form>
+</div>
+
+<script>
+document.getElementById("resetForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const msg = document.getElementById("msg");
+
+    const emailSalvo = localStorage.getItem("email");
+
+    if(email !== emailSalvo){
+        msg.textContent = "Email não encontrado.";
+        msg.className = "msg error";
+        return;
+    }
+
+    // gera código
+    const codigo = Math.floor(100000 + Math.random() * 900000);
+
+    // salva código
+    localStorage.setItem("codigoRecuperacao", codigo);
+
+    msg.textContent = "Código enviado! (simulação: " + codigo + ")";
+    msg.className = "msg success";
+
+    // redireciona
+    setTimeout(() => {
+        window.location.href = "nova-senha.html";
+    }, 5000);
+});
+</script>
+
+</body>
+</html>

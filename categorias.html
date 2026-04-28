@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Categorias - Footerly</title>
+<link rel="stylesheet" href="style.css">
+
+<link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="shortcut icon" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+
+<style>
+/* estado inicial */
+.reveal {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.25s ease-out;
+}
+
+/* estado final */
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+
+</head>
+<body>
+
+<header class="reveal">
+    <div class="logo reveal">Footerly</div>
+
+    <nav>
+        <a href="index.html" class="btn reveal">Footerly</a>
+        <a href="servicos.html" class="reveal">Serviços</a>
+        <a href="suporte.html" class="reveal">Suporte</a>
+    </nav>
+</header>
+
+<section class="hero reveal">
+    <h1 class="reveal">Categorias</h1>
+    <p class="reveal">Modelos organizados para diferentes tipos de projetos</p>
+</section>
+
+<section class="grid-section">
+
+    <div class="card reveal">
+        <h3 class="reveal">Templates Gratuitos</h3>
+        <p class="reveal">Modelos prontos, divertitos, personalizáveis e responsivos para diferentes tipos de sites.</p>
+    </div>
+
+    <div class="card reveal">
+        <h3 class="reveal">Corporativo</h3>
+        <p class="reveal">Footers institucionais com dados da empresa, políticas legais e navegação estratégica.</p>
+    </div>
+
+    <div class="card reveal">
+        <h3 class="reveal">Personalização Responsiva</h3>
+        <p class="reveal">Adaptação perfeita para desktop, tablet e smartphone.</p>
+    </div>
+
+    <div class="card reveal">
+        <h3 class="reveal">E-commerce</h3>
+        <p class="reveal">Estrutura completa para lojas virtuais com foco em conversão e confiança.</p>
+    </div>
+
+</section>
+
+<footer class="footer reveal">
+    <div class="footer-container">
+
+        <div class="footer-logo reveal">
+            <h2 class="reveal">Footerly</h2>
+            <p class="reveal">
+                Transformando rodapés em experiências estratégicas e funcionais para sites de todos os segmentos.
+            </p>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.instagram.com/wluvviie/" target="_blank" class="reveal">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@luwiie9411" target="_blank" class="reveal">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://wa.me/5581984016083" target="_blank" class="reveal">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:luanvieira150504@gmail.com" class="reveal">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom reveal">
+        <p class="reveal">© 2026 Footerly - Todos os direitos reservados</p>
+    </div>
+</footer>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script>
+window.addEventListener("load", () => {
+    const elementos = document.querySelectorAll(".reveal");
+
+    elementos.forEach((el, index) => {
+        setTimeout(() => {
+            el.classList.add("show");
+        }, index * 20); // ⚡ ULTRA RÁPIDO
+    });
+});
+</script>
+
+</body>
+</html>
